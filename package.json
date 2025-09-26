@@ -1,7 +1,7 @@
 {
   "name": "@capgo/capacitor-mux-player",
   "version": "7.0.0",
-  "description": "Naitve Mux Player SDK to play video on IOS and Android",
+  "description": "Native Mux Player SDK to play video on IOS and Android",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
