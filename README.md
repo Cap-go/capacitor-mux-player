@@ -154,4 +154,8 @@ Listen to player lifecycle or playback events emitted by the plugin.
 | **`error`**           | <code>{ message: string; }</code>     | Fired when an unrecoverable error occurs.                    |
 | **`playerDismissed`** | <code>void</code>                     | Fired when the fullscreen player is closed.                  |
 
+| Method               | Signature                                    | Description                             |
+| -------------------- | -------------------------------------------- | --------------------------------------- |
+| **getPluginVersion** | () =&gt; Promise&lt;{ version: string; }&gt; | Get the native Capacitor plugin version |
+
 </docgen-api>
