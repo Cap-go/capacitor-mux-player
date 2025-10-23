@@ -218,4 +218,8 @@ export class MuxPlayerWeb extends WebPlugin implements MuxPlayerPlugin {
       this.notifyListeners('error', { message });
     });
   }
+
+  async getPluginVersion(): Promise<{ version: string }> {
+    return { version: 'web' };
+  }
 }
