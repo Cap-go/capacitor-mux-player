@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.1.0](https://github.com/Cap-go/capacitor-mux-player/compare/7.0.9...7.1.0) (2025-10-23)
+
+
+### Features
+
+* add getPluginVersion method to MuxPlayerPlugin and MuxPlayerWeb ([ee5993b](https://github.com/Cap-go/capacitor-mux-player/commit/ee5993bdc755f6b315833c3667f15696edd54f65))
+
+
+### Bug Fixes
+
+* remove unnecessary content field from Discord release notification ([8a6746b](https://github.com/Cap-go/capacitor-mux-player/commit/8a6746ba0d0ec1260c4865546b9eece8878822ba))
+
 ## [7.0.9](https://github.com/Cap-go/capacitor-mux-player/compare/7.0.8...7.0.9) (2025-10-16)
 
 ## [7.0.8](https://github.com/Cap-go/capacitor-mux-player/compare/7.0.7...7.0.8) (2025-10-15)
