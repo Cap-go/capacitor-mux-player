@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.1.1](https://github.com/Cap-go/capacitor-mux-player/compare/7.1.0...7.1.1) (2025-10-23)
+
+
+### Bug Fixes
+
+* remove footer in discord ([1ce2091](https://github.com/Cap-go/capacitor-mux-player/commit/1ce20911f573b2d0d6e3fe94966c01881e4158ad))
+* update Discord release notification username to include repository name ([9e15e81](https://github.com/Cap-go/capacitor-mux-player/commit/9e15e8175983d11fac61fa7050054a162992b651))
+
 ## [7.1.0](https://github.com/Cap-go/capacitor-mux-player/compare/7.0.9...7.1.0) (2025-10-23)
 
 
