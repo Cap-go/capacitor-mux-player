@@ -7,6 +7,10 @@
 </div>
 Naitve Mux Player SDK to play video on IOS and Android
 
+## Documentation
+
+The most complete doc is available here: https://capgo.app/docs/plugins/mux-player/
+
 ## Install
 
 ```bash
