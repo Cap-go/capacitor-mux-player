@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.2.5](https://github.com/Cap-go/capacitor-mux-player/compare/7.2.4...7.2.5) (2025-10-29)
+
+
+### Bug Fixes
+
+* update plugin version to 7.2.4 ([6c98948](https://github.com/Cap-go/capacitor-mux-player/commit/6c98948c7cb46e1c3e1f269cffe4ea6089265778))
+
 ## [7.2.4](https://github.com/Cap-go/capacitor-mux-player/compare/7.2.3...7.2.4) (2025-10-29)
 
 
