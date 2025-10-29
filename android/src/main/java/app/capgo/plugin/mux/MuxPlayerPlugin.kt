@@ -11,7 +11,7 @@ import com.getcapacitor.PluginMethod
 @CapacitorPlugin(name = "MuxPlayer")
 class MuxPlayerPlugin : Plugin() {
 
-    private val PLUGIN_VERSION = "7.1.1"
+    private val PLUGIN_VERSION = "7.2.4"
 
     companion object {
         internal var shared: MuxPlayerPlugin? = null
