@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.2.4](https://github.com/Cap-go/capacitor-mux-player/compare/7.2.3...7.2.4) (2025-10-29)
+
+
+### Bug Fixes
+
+* CI/CD config ([e2b0d92](https://github.com/Cap-go/capacitor-mux-player/commit/e2b0d92ce5493ce84f90b2d49ea9ae6e4d072a9d))
+* model github action ([0ca7877](https://github.com/Cap-go/capacitor-mux-player/commit/0ca787768d5393530b0b15379c439de05e807e02))
+* update github action ([53138a4](https://github.com/Cap-go/capacitor-mux-player/commit/53138a479b762cbe38a153cc2ffcffb88454a6a1))
+
 ## [7.2.3](https://github.com/Cap-go/capacitor-mux-player/compare/7.2.2...7.2.3) (2025-10-27)
 
 
