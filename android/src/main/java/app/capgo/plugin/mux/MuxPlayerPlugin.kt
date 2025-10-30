@@ -11,7 +11,7 @@ import com.getcapacitor.PluginMethod
 @CapacitorPlugin(name = "MuxPlayer")
 class MuxPlayerPlugin : Plugin() {
 
-    private val PLUGIN_VERSION = "7.2.4"
+    private val pluginVersion = "7.2.4"
 
     companion object {
         internal var shared: MuxPlayerPlugin? = null
@@ -95,7 +95,7 @@ class MuxPlayerPlugin : Plugin() {
     fun getPluginVersion(call: PluginCall) {
         try {
             val ret = JSObject()
-            ret.put("version", PLUGIN_VERSION)
+            ret.put("version", pluginVersion)
             call.resolve(ret)
         } catch (e: Exception) {
             call.reject("Could not get plugin version", e)
