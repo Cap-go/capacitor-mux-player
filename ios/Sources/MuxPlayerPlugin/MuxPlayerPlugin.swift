@@ -9,7 +9,7 @@ import MuxPlayerSwift
 
 @objc(MuxPlayerPlugin)
 public class MuxPlayerPlugin: CAPPlugin, CAPBridgedPlugin, UIAdaptivePresentationControllerDelegate {
-    private let pluginVersion: String = "7.2.8"
+    private let pluginVersion: String = "7.2.9"
     public let identifier = "MuxPlayerPlugin"
     public let jsName = "MuxPlayer"
     public let pluginMethods: [CAPPluginMethod] = [
@@ -330,7 +330,7 @@ public class MuxPlayerPlugin: CAPPlugin, CAPBridgedPlugin, UIAdaptivePresentatio
 
 @objc(MuxPlayerPlugin)
 public class MuxPlayerPlugin: CAPPlugin, CAPBridgedPlugin {
-    private let pluginVersion: String = "7.2.8"
+    private let pluginVersion: String = "7.2.9"
     public let identifier = "MuxPlayerPlugin"
     public let jsName = "MuxPlayer"
     public let pluginMethods: [CAPPluginMethod] = [
