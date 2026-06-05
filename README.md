@@ -39,7 +39,7 @@ npx cap sync
 
 - Gradle pulls the player from the Mux artifactory (`https://muxinc.jfrog.io/artifactory/default-maven-release-local`). Ensure your corporate proxy allows downloads from that host.
 - `npx cap sync android` adds the Mux Maven repository to `android/build.gradle` automatically. If Capacitor lifecycle hooks are disabled in your project, add that repository manually to the root Gradle configuration (`android/build.gradle`).
-- The plugin depends on Kotlin 1.9 and Media3 1.1.x through the Mux artifact.
+- The plugin uses Kotlin 2.2.20 and resolves Media3 transitively through the Mux artifact.
 
 ### Web setup
 
