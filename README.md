@@ -38,7 +38,18 @@ npx cap sync
 ### Android setup
 
 - Gradle pulls the player from the Mux artifactory (`https://muxinc.jfrog.io/artifactory/default-maven-release-local`). Ensure your corporate proxy allows downloads from that host.
-- The plugin depends on Kotlin 1.9 and Media3 1.1.x through the Mux artifact. No additional configuration is required in the consuming app.
+- `npx cap sync android` adds the Mux Maven repository to `android/build.gradle` automatically. If Capacitor lifecycle hooks are disabled in your project, add that repository manually to the root Gradle configuration (`android/build.gradle`).
+- The plugin uses Kotlin 2.2.20 and resolves Media3 transitively through the Mux artifact.
+- Android apps targeting SDK 33 or newer will also see `android.permission.POST_NOTIFICATIONS` merged from this library. The plugin does not request notifications at runtime; the manifest entry prevents Android lint failures caused by Mux's Glide `NotificationTarget` dependency. If your app does not need that permission, remove it from your app manifest with:
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:node="remove" />
+</manifest>
+```
 
 ### Web setup
 

@@ -13,7 +13,9 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "CapgoCapacitorMuxPlayer.podspec"
+    "CapgoCapacitorMuxPlayer.podspec",
+    "scripts/configure-android.js",
+    "scripts/configure-ios-dsyms.js"
   ],
   "author": "Martin Donadieu <martin@capgo.app>",
   "license": "MPL-2.0",
@@ -34,6 +36,8 @@
     "player"
   ],
   "scripts": {
+    "capacitor:sync:after": "node scripts/configure-android.js && node scripts/configure-ios-dsyms.js",
+    "capacitor:update:after": "node scripts/configure-android.js && node scripts/configure-ios-dsyms.js",
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
     "verify:ios": "xcodebuild -scheme CapgoCapacitorMuxPlayer -destination generic/platform=iOS",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
