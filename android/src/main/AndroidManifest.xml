@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Mux's Android dependency tree includes Glide's NotificationTarget; without this, targetSdk 33+ consumer apps fail lint. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application>
         <activity
             android:name="app.capgo.plugin.mux.MuxPlayerActivity"
