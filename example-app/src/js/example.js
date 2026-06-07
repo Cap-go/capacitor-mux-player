@@ -1,3 +1,5 @@
+import { CapacitorUpdater } from '@capgo/capacitor-updater';
+import { Capacitor } from '@capacitor/core';
 import { MuxPlayer } from '@capgo/capacitor-mux-player';
 
 const playbackIdInput = document.getElementById('playbackId');
@@ -174,3 +176,9 @@ attachListeners().catch((error) => {
   appendLog('initial-listener-error', { message });
   setStatus(`Listener setup failed: ${message}`);
 });
+
+if (Capacitor.isNativePlatform()) {
+  CapacitorUpdater.notifyAppReady().catch((error) => {
+    console.error('Capgo notifyAppReady failed', error);
+  });
+}
