@@ -27,3 +27,13 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// Capgo Mux Player Maven repository (auto-generated)
+allprojects {
+    repositories {
+        maven {
+            url 'https://muxinc.jfrog.io/artifactory/default-maven-release-local'
+        }
+    }
+}
+// End Capgo Mux Player Maven repository
