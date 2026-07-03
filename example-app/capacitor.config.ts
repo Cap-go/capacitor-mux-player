@@ -4,7 +4,7 @@ import pkg from './package.json';
 
 const config: CapacitorConfig = {
   appId: 'app.capgo.mux.player',
-  appName: 'Mux Player Example',
+  appName: '@capgo/capacitor-mux-player',
   webDir: 'dist',
   plugins: {
     SplashScreen: {
