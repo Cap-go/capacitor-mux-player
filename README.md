@@ -1,11 +1,27 @@
 # @capgo/capacitor-mux-player
-<a href="https://capgo.app/"><img src="https://capgo.app/readme-banner.svg?repo=Cap-go/capacitor-mux-player" alt="Capgo - Instant updates for Capacitor" /></a>
+
+Play Mux videos in your Capacitor app with the native Mux Player SDKs on iOS and Android, including Mux Data playback analytics.
+
+<a href="https://capgo.app/?ref=plugin_mux_player"><img src="https://capgo.app/readme-banner.svg?repo=Cap-go/capacitor-mux-player" alt="Capgo - Instant updates for Capacitor" /></a>
 
 <div align="center">
-  <h2><a href="https://capgo.app/?ref=plugin_mux_player"> ➡️ Get Instant updates for your App with Capgo</a></h2>
-  <h2><a href="https://capgo.app/consulting/?ref=plugin_mux_player"> Missing a feature? We’ll build the plugin for you 💪</a></h2>
+  <p><b>Capgo</b>: open-source live updates for Ionic and Capacitor apps. Ship OTA fixes and features instantly, without waiting for app store review.</p>
+  <h2><a href="https://capgo.app/register/?ref=plugin_mux_player">➡️ Get started for free</a></h2>
+  <p>14-day unlimited free trial. No credit card required</p>
+  <p><a href="https://capgo.app/consulting/?ref=plugin_mux_player">Missing a feature? We'll build the plugin for you 💪</a></p>
 </div>
-Naitve Mux Player SDK to play video on IOS and Android
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cap-go/capacitor-mux-player/main/assets/github-social-preview.png" alt="@capgo/capacitor-mux-player for Capacitor apps" width="300" />
+</p>
+
+## Key features
+
+- **Fullscreen playback**: `play()` opens the native Mux Player with a playback ID.
+- **Dismiss**: `dismiss()` closes the player.
+- **State**: `isActive()` reports whether the player is showing.
+- **Native SDKs**: Mux Player Swift on iOS and the Mux Player Android SDK, with Mux Data stats.
+- **Platforms**: iOS, Android and Web. Web provides a basic fallback player.
 
 ## Documentation
 
