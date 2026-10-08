@@ -1,80 +1,142 @@
 <!doctype html>
-<html lang="en" dir="ltr" class="hydrated">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    
     <meta
       name="viewport"
       content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-<title>@capgo/capacitor-mux-player</title>
-
-</head>
+    <title>@capgo/capacitor-mux-player</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
   <body>
-    <main>
-      <h1>@capgo/capacitor-mux-player Demo</h1>
-      <p>
-        Configure playback options and launch the native Mux Player. Listener callbacks below mirror native events so you can verify analytics output.
+    <div class="app">
+      <header class="brand">
+        <img src="../assets/capgo-icon.png" width="44" height="44" alt="Capgo" />
+        <div>
+          <h1>Mux Player</h1>
+          <p>@capgo/capacitor-mux-player</p>
+        </div>
+      </header>
+
+      <p class="lead">
+        Launch the native or web Mux player with a public demo stream, tune optional metadata, and watch plugin events in
+        the log below.
       </p>
 
-      <section>
-        <h2>Playback Options</h2>
-        <label for="playbackId">Playback ID *</label>
-        <input type="text" id="playbackId" name="playbackId" value="" placeholder="e.g. abc123xyz" />
+      <section class="card">
+        <div class="status-row">
+          <h2>Status</h2>
+          <span id="statusChip" class="chip" data-state="ready">Idle</span>
+        </div>
+      </section>
 
-        <label for="playbackToken">Playback Token</label>
-        <input type="text" id="playbackToken" name="playbackToken" placeholder="JWT for signed playback" />
+      <section class="card">
+        <h2>Player setup</h2>
+        <div class="field-grid">
+          <div class="field">
+            <label for="playbackId">Playback ID (required)</label>
+            <input
+              type="text"
+              id="playbackId"
+              name="playbackId"
+              value="4XYzhPXzqArkFI8d1vDsScBLD69Gh1b2"
+              autocomplete="off"
+            />
+          </div>
 
-        <label for="drmToken">DRM Token</label>
-        <input type="text" id="drmToken" name="drmToken" placeholder="JWT for DRM playback" />
+          <details class="group" open>
+            <summary>Presentation</summary>
+            <div class="field-grid">
+              <div class="field">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" value="Capgo Mux demo" />
+              </div>
+              <div class="field">
+                <label for="subtitle">Subtitle</label>
+                <input type="text" id="subtitle" name="subtitle" value="Example app playback" />
+              </div>
+              <div class="field">
+                <label for="poster">Poster URL</label>
+                <input type="url" id="poster" name="poster" placeholder="https://example.com/poster.jpg" />
+              </div>
+            </div>
+          </details>
 
-        <label for="customDomain">Custom Domain</label>
-        <input type="text" id="customDomain" name="customDomain" placeholder="stream.example.com" />
+          <details class="group">
+            <summary>Authentication</summary>
+            <div class="field-grid">
+              <div class="field">
+                <label for="playbackToken">Playback token</label>
+                <input type="text" id="playbackToken" name="playbackToken" placeholder="JWT for signed playback" />
+              </div>
+              <div class="field">
+                <label for="drmToken">DRM token</label>
+                <input type="text" id="drmToken" name="drmToken" placeholder="JWT for DRM playback" />
+              </div>
+            </div>
+          </details>
 
-        <label for="startTime">Start Time (seconds)</label>
-        <input type="number" id="startTime" name="startTime" min="0" step="1" placeholder="0" />
+          <details class="group">
+            <summary>Advanced</summary>
+            <div class="field-grid">
+              <div class="field">
+                <label for="customDomain">Custom domain</label>
+                <input type="text" id="customDomain" name="customDomain" placeholder="stream.example.com" />
+              </div>
+              <div class="field">
+                <label for="startTime">Start time (seconds)</label>
+                <input type="number" id="startTime" name="startTime" min="0" step="1" placeholder="0" />
+              </div>
+              <div class="field">
+                <label for="environmentKey">Environment key</label>
+                <input type="text" id="environmentKey" name="environmentKey" placeholder="Mux Data environment key" />
+              </div>
+              <div class="field">
+                <label for="playerName">Player name</label>
+                <input type="text" id="playerName" name="playerName" value="capgo-mux-example" />
+              </div>
+            </div>
+          </details>
 
-        <label for="poster">Poster URL</label>
-        <input type="url" id="poster" name="poster" placeholder="https://example.com/poster.jpg" />
-
-        <label for="environmentKey">Environment Key</label>
-        <input type="text" id="environmentKey" name="environmentKey" placeholder="Mux environment key" />
-
-        <label for="playerName">Player Name</label>
-        <input type="text" id="playerName" name="playerName" placeholder="Custom player name" />
-
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" placeholder="Displayed in native chrome" />
-
-        <label for="subtitle">Subtitle</label>
-        <input type="text" id="subtitle" name="subtitle" placeholder="Optional description" />
-
-        <div class="toggle-group">
-          <label><input type="checkbox" id="autoPlay" checked /> Auto play</label>
-          <label><input type="checkbox" id="muted" /> Start muted</label>
-          <label><input type="checkbox" id="smartCache" /> Enable smart cache</label>
-          <label><input type="checkbox" id="debug" /> Debug logging</label>
+          <div class="toggle-grid">
+            <label class="toggle"><input type="checkbox" id="autoPlay" checked /> Auto play</label>
+            <label class="toggle"><input type="checkbox" id="muted" /> Start muted</label>
+            <label class="toggle"><input type="checkbox" id="smartCache" /> Smart cache</label>
+            <label class="toggle"><input type="checkbox" id="debug" /> Debug logging</label>
+          </div>
         </div>
 
-        <button id="playButton" type="button">Play</button>
+        <p class="hint">Signed and DRM fields stay empty for the public demo ID. Fill them when testing protected assets.</p>
       </section>
 
-      <section>
-        <h2>Player Controls</h2>
-        <button id="dismissButton" type="button">Dismiss Player</button>
-        <button id="isActiveButton" type="button">Check Active State</button>
-        <button id="resetListenersButton" type="button">Reset Listeners</button>
+      <section class="card">
+        <h2>Controls</h2>
+        <div class="actions">
+          <button id="playButton" type="button">Play</button>
+          <button id="pauseButton" type="button" class="secondary">Pause</button>
+          <button id="seekBackButton" type="button" class="secondary">Seek -10s</button>
+          <button id="seekForwardButton" type="button" class="secondary">Seek +10s</button>
+          <button id="dismissButton" type="button" class="danger">Dismiss</button>
+          <button id="isActiveButton" type="button" class="secondary">Is active</button>
+          <button id="versionButton" type="button" class="secondary">Plugin version</button>
+          <button id="resetListenersButton" type="button" class="secondary">Reset listeners</button>
+        </div>
+        <p class="hint" id="webControlHint">
+          Pause and seek buttons target the web overlay player. On iOS and Android, use the native player chrome.
+        </p>
       </section>
 
-      <p id="statusText">Status: Idle</p>
-
-      <section>
-        <h2>Event Log</h2>
-        <pre id="eventLog">Listeners attach on load.</pre>
+      <section class="card">
+        <div class="log-toolbar">
+          <button id="clearLogButton" type="button" class="secondary">Clear log</button>
+        </div>
+        <h2>Event log</h2>
+        <pre id="eventLog" class="log-pane">Waiting for listeners...</pre>
       </section>
-    </main>
+    </div>
 
     <script src="./js/example.js" type="module"></script>
   </body>
